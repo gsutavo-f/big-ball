@@ -1,0 +1,40 @@
+{
+    "groups": [
+        [
+            {
+                "id": "1",
+                "country": "Catar"
+            },
+            {
+                "id": "2",
+                "country": "Equador"
+            },
+            {
+                "id": "3",
+                "country": "Senegal"
+            },
+            {
+                "id": "4",
+                "country": "Holanda"
+            }
+        ],
+        [
+            {
+                "id": "1",
+                "country": "Inglaterra"
+            },
+            {
+                "id": "2",
+                "country": "Ira"
+            },
+            {
+                "id": "3",
+                "country": "EUA"
+            },
+            {
+                "id": "4",
+                "country": "Euro"
+            }
+        ]
+    ]
+}

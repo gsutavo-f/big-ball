@@ -5,7 +5,10 @@ import { App } from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div>
+      <App index={0} />
+      <App index={1} />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 )

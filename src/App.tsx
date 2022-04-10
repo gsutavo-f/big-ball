@@ -1,25 +1,7 @@
 import { useState } from 'react';
 import { DragDropContext, Draggable, Droppable, DropResult } from 'react-beautiful-dnd';
 import './App.css';
-
-const listItems = [
-  {
-    id: "1",
-    name: "Catar"
-  },
-  {
-    id: "2",
-    name: "Equador"
-  },
-  {
-    id: "3",
-    name: "Senegal"
-  },
-  {
-    id: "4",
-    name: "Holanda"
-  }
-]
+import source_data from "./json/groups.json";
 
 const getItemsStyle = (isDragging: boolean, draggableStyle: any) => ({
   padding: 10,
@@ -33,19 +15,18 @@ const getItemsStyle = (isDragging: boolean, draggableStyle: any) => ({
   ...draggableStyle
 })
 
-// type GroupProps = {
-//   id: string,
-//   name: string
-// }
+type IndexProps = {
+  index: number;
+}
 
-export function App() {
-  const [group, setGroup] = useState(listItems)
+export function App(props: IndexProps) {
+  const [group, setGroup] = useState(source_data.groups.at(props.index))
 
   const onDragEnd = (result: DropResult) => {
     const { source, destination } = result
     if (!destination) return
 
-    const items = Array.from(group)
+    const items = Array.from(group!)
     const [newOrder] = items.splice(source.index, 1)
     items.splice(destination.index, 0, newOrder)
 
@@ -54,13 +35,12 @@ export function App() {
 
   return (
     <div className="App">
-      <h1>Drag and Drop</h1>
-
+      <h1>Grupo</h1>
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId='group'>
           {(provided) => (
             <div className="group" {...provided.droppableProps} ref={provided.innerRef}>
-              {group.map(({ id, name }, index) => {
+              {group!.map(({ id, country }, index) => {
                 return (
                   <Draggable key={id} draggableId={id} index={index}>
                     {(provided, snapshot) => (
@@ -68,7 +48,7 @@ export function App() {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                         style={getItemsStyle(snapshot.isDragging, provided.draggableProps.style)}>
-                        {name}
+                        {country}
                       </div>
                     )}
                   </Draggable>
@@ -79,8 +59,6 @@ export function App() {
           )}
         </Droppable>
       </DragDropContext>
-
-      <h2>Ola Mundo</h2>
     </div>
   )
 }
