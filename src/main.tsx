@@ -5,6 +5,7 @@ import { App } from './App'
 
 ReactDOM.render(
   <React.StrictMode>
+    <h1 className="logo">BOLA.OOO</h1>
     <div className='group-on'>
       <App index={0} groupName="Grupo A" />
       <App index={1} groupName="Grupo B" />

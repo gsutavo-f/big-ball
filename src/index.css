@@ -3,7 +3,7 @@ body {
   font-family: 'Varela Round', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #bbb2a1;
+  background-color: #053540;
 }
 
 code {
@@ -14,4 +14,11 @@ code {
 .group-on {
   display: flex;
   justify-content: space-around;
+  padding-inline: 300px;
+}
+
+.logo {
+  color: #5CF2AC;
+  text-align: center;
+  font-size: 56px;
 }

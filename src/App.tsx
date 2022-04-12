@@ -6,8 +6,8 @@ import source_data from "./json/groups.json";
 const getItemsStyle = (isDragging: boolean, draggableStyle: any) => ({
   padding: 10,
   marginBottom: `0px`,
-  background: isDragging ? "#adc0b4" : "#bed6c7",
-  color: isDragging ? "#444444" : "#444444",
+  background: isDragging ? "#2A8C68" : "#2A8C68",
+  color: isDragging ? "#010326" : "#010326",
   fontSize: `20px`,
   fontWeight: `600`,
   borderRadius: isDragging ? `4px` : `0`,
@@ -38,7 +38,7 @@ export function App(props: IndexProps) {
 
   return (
     <div className="group-card">
-      <h1>{props.groupName}</h1>
+      <h1 className="title">{props.groupName}</h1>
       <div className="group">
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable droppableId='group'>
