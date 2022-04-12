@@ -20,20 +20,128 @@
         ],
         [
             {
-                "id": "1",
+                "id": "5",
                 "country": "Inglaterra"
             },
             {
-                "id": "2",
+                "id": "6",
                 "country": "Ira"
             },
             {
-                "id": "3",
+                "id": "7",
                 "country": "EUA"
             },
             {
-                "id": "4",
-                "country": "Euro"
+                "id": "8",
+                "country": "Euro Play-off"
+            }
+        ],
+        [
+            {
+                "id": "9",
+                "country": "Argentina"
+            },
+            {
+                "id": "10",
+                "country": "Arabia Saudita"
+            },
+            {
+                "id": "11",
+                "country": "Mexico"
+            },
+            {
+                "id": "12",
+                "country": "Polonia"
+            }
+        ],
+        [
+            {
+                "id": "13",
+                "country": "França"
+            },
+            {
+                "id": "14",
+                "country": "IC Play-off 1"
+            },
+            {
+                "id": "15",
+                "country": "Dinamarca"
+            },
+            {
+                "id": "16",
+                "country": "Tunisia"
+            }
+        ],
+        [
+            {
+                "id": "17",
+                "country": "Espanha"
+            },
+            {
+                "id": "18",
+                "country": "IC Play-off 2"
+            },
+            {
+                "id": "19",
+                "country": "Alemanha"
+            },
+            {
+                "id": "20",
+                "country": "Japão"
+            }
+        ],
+        [
+            {
+                "id": "21",
+                "country": "Bélgica"
+            },
+            {
+                "id": "22",
+                "country": "Canadá"
+            },
+            {
+                "id": "23",
+                "country": "Marrocos"
+            },
+            {
+                "id": "24",
+                "country": "Croácia"
+            }
+        ],
+        [
+            {
+                "id": "25",
+                "country": "Brasil"
+            },
+            {
+                "id": "26",
+                "country": "Sérvia"
+            },
+            {
+                "id": "27",
+                "country": "Suiça"
+            },
+            {
+                "id": "28",
+                "country": "Camarões"
+            }
+        ],
+        [
+            {
+                "id": "29",
+                "country": "Portugal"
+            },
+            {
+                "id": "30",
+                "country": "Gana"
+            },
+            {
+                "id": "31",
+                "country": "Uruguai"
+            },
+            {
+                "id": "32",
+                "country": "Coreia do Sul"
             }
         ]
     ]

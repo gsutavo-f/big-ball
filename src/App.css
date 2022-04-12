@@ -40,3 +40,10 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.group-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
