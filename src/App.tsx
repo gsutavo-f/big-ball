@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { DragDropContext, Draggable, Droppable, DropResult } from 'react-beautiful-dnd';
 import './App.css';
 import source_data from "./json/groups.json";
+import ReactCountryFlag from "react-country-flag";
 
 const getItemsStyle = (isDragging: boolean, draggableStyle: any) => ({
   padding: 10,
@@ -11,8 +12,8 @@ const getItemsStyle = (isDragging: boolean, draggableStyle: any) => ({
   fontSize: `20px`,
   fontWeight: `600`,
   borderRadius: isDragging ? `4px` : `0`,
-  textAlign: `center`,
-  width: `150px`,
+  textAlign: `left`,
+  width: `190px`,
 
   ...draggableStyle
 })
@@ -44,7 +45,7 @@ export function App(props: IndexProps) {
           <Droppable droppableId='group'>
             {(provided) => (
               <div className="group" {...provided.droppableProps} ref={provided.innerRef}>
-                {group!.map(({ id, country }, index) => {
+                {group!.map(({ id, country, code }, index) => {
                   return (
                     <Draggable key={id} draggableId={id} index={index}>
                       {(provided, snapshot) => (
@@ -52,6 +53,30 @@ export function App(props: IndexProps) {
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
                           style={getItemsStyle(snapshot.isDragging, provided.draggableProps.style)}>
+                          {/* <ReactCountryFlag
+                            countryCode={code}
+                            svg
+                            style={{
+                              width: '2em',
+                              height: '2em',
+                              marginRight: '0.5rem'
+                            }}
+                            title={code}
+                          /> */}
+                          <ReactCountryFlag
+                            countryCode={code}
+                            svg
+                            cdnUrl="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/1x1/"
+                            style={{
+                              width: '1.5rem',
+                              height: '1.5rem',
+                              borderRadius: '50%',
+                              marginRight: '0.75rem',
+                              boxShadow: '0px 0px 10px 1px rgba(0,0,0,0.5)'
+                            }}
+                            cdnSuffix="svg"
+                            title={code}
+                          />
                           {country}
                         </div>
                       )}

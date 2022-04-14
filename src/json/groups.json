@@ -3,145 +3,177 @@
         [
             {
                 "id": "1",
-                "country": "Qatar"
+                "country": "Qatar",
+                "code": "QA"
             },
             {
                 "id": "2",
-                "country": "Equador"
+                "country": "Equador",
+                "code": "EC"
             },
             {
                 "id": "3",
-                "country": "Senegal"
+                "country": "Senegal",
+                "code": "SN"
             },
             {
                 "id": "4",
-                "country": "Holanda"
+                "country": "Holanda",
+                "code": "BQ"
             }
         ],
         [
             {
                 "id": "5",
-                "country": "Inglaterra"
+                "country": "Inglaterra",
+                "code": "GB-ENG"
             },
             {
                 "id": "6",
-                "country": "Irã"
+                "country": "Irã",
+                "code": "IR"
             },
             {
                 "id": "7",
-                "country": "EUA"
+                "country": "EUA",
+                "code": "US"
             },
             {
                 "id": "8",
-                "country": "Euro Play-off"
+                "country": "Euro Play-off",
+                "code": "CY"
             }
         ],
         [
             {
                 "id": "9",
-                "country": "Argentina"
+                "country": "Argentina",
+                "code": "AR"
             },
             {
                 "id": "10",
-                "country": "Arábia Saudita"
+                "country": "Arábia Saudita",
+                "code": "SA"
             },
             {
                 "id": "11",
-                "country": "México"
+                "country": "México",
+                "code": "MX"
             },
             {
                 "id": "12",
-                "country": "Polônia"
+                "country": "Polônia",
+                "code": "PL"
             }
         ],
         [
             {
                 "id": "13",
-                "country": "França"
+                "country": "França",
+                "code": "FR"
             },
             {
                 "id": "14",
-                "country": "IC Play-off 1"
+                "country": "IC Play-off 1",
+                "code": "CY"
             },
             {
                 "id": "15",
-                "country": "Dinamarca"
+                "country": "Dinamarca",
+                "code": "DK"
             },
             {
                 "id": "16",
-                "country": "Tunísia"
+                "country": "Tunísia",
+                "code": "TN"
             }
         ],
         [
             {
                 "id": "17",
-                "country": "Espanha"
+                "country": "Espanha",
+                "code": "ES"
             },
             {
                 "id": "18",
-                "country": "IC Play-off 2"
+                "country": "IC Play-off 2",
+                "code": "CY"
             },
             {
                 "id": "19",
-                "country": "Alemanha"
+                "country": "Alemanha",
+                "code": "DE"
             },
             {
                 "id": "20",
-                "country": "Japão"
+                "country": "Japão",
+                "code": "JP"
             }
         ],
         [
             {
                 "id": "21",
-                "country": "Bélgica"
+                "country": "Bélgica",
+                "code": "BE"
             },
             {
                 "id": "22",
-                "country": "Canadá"
+                "country": "Canadá",
+                "code": "CA"
             },
             {
                 "id": "23",
-                "country": "Marrocos"
+                "country": "Marrocos",
+                "code": "MA"
             },
             {
                 "id": "24",
-                "country": "Croácia"
+                "country": "Croácia",
+                "code": "HR"
             }
         ],
         [
             {
                 "id": "25",
-                "country": "Brasil"
+                "country": "Brasil",
+                "code": "BR"
             },
             {
                 "id": "26",
-                "country": "Sérvia"
+                "country": "Sérvia",
+                "code": "RS"
             },
             {
                 "id": "27",
-                "country": "Suiça"
+                "country": "Suiça",
+                "code": "CH"
             },
             {
                 "id": "28",
-                "country": "Camarões"
+                "country": "Camarões",
+                "code": "CM"
             }
         ],
         [
             {
                 "id": "29",
-                "country": "Portugal"
+                "country": "Portugal",
+                "code": "PT"
             },
             {
                 "id": "30",
-                "country": "Gana"
+                "country": "Gana",
+                "code": "GH"
             },
             {
                 "id": "31",
-                "country": "Uruguai"
+                "country": "Uruguai",
+                "code": "UY"
             },
             {
                 "id": "32",
-                "country": "Coreia do Sul"
+                "country": "Coreia do Sul",
+                "code": "KR"
             }
         ]
     ]

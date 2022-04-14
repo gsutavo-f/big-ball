@@ -6,6 +6,8 @@ import { App } from './App'
 ReactDOM.render(
   <React.StrictMode>
     <h1 className="logo">BOLA.OOO</h1>
+    <div>
+    </div>
     <div className='group-on'>
       <App index={0} groupName="Grupo A" />
       <App index={1} groupName="Grupo B" />
@@ -18,6 +20,7 @@ ReactDOM.render(
       <App index={6} groupName="Grupo G" />
       <App index={7} groupName="Grupo H" />
     </div>
+    <span className="fi fi-gr"></span> <span className="fi fi-gr fis"></span>
   </React.StrictMode>,
   document.getElementById('root')
 )
