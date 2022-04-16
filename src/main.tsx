@@ -1,26 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import { App } from './App'
+import './styles/index.css'
+import { Group } from './components/Group'
 
 ReactDOM.render(
   <React.StrictMode>
     <h1 className="logo">BOLA.OOO</h1>
-    <div>
+    <div className='group-on'>
+      <Group index={0} groupName="Grupo A" />
+      <Group index={1} groupName="Grupo B" />
+      <Group index={2} groupName="Grupo C" />
+      <Group index={3} groupName="Grupo D" />
     </div>
     <div className='group-on'>
-      <App index={0} groupName="Grupo A" />
-      <App index={1} groupName="Grupo B" />
-      <App index={2} groupName="Grupo C" />
-      <App index={3} groupName="Grupo D" />
+      <Group index={4} groupName="Grupo E" />
+      <Group index={5} groupName="Grupo F" />
+      <Group index={6} groupName="Grupo G" />
+      <Group index={7} groupName="Grupo H" />
     </div>
-    <div className='group-on'>
-      <App index={4} groupName="Grupo E" />
-      <App index={5} groupName="Grupo F" />
-      <App index={6} groupName="Grupo G" />
-      <App index={7} groupName="Grupo H" />
-    </div>
-    <span className="fi fi-gr"></span> <span className="fi fi-gr fis"></span>
   </React.StrictMode>,
   document.getElementById('root')
 )

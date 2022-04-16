@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { DragDropContext, Draggable, Droppable, DropResult } from 'react-beautiful-dnd';
-import './App.css';
-import source_data from "./json/groups.json";
-import ReactCountryFlag from "react-country-flag";
+import '../styles/Group.css';
+import source_data from "../json/groups.json";
+import { Flags } from './Flags';
 
 const getItemsStyle = (isDragging: boolean, draggableStyle: any) => ({
   padding: 10,
@@ -23,7 +23,7 @@ type IndexProps = {
   groupName: string;
 }
 
-export function App(props: IndexProps) {
+export function Group(props: IndexProps) {
   const [group, setGroup] = useState(source_data.groups.at(props.index))
 
   const onDragEnd = (result: DropResult) => {
@@ -44,7 +44,7 @@ export function App(props: IndexProps) {
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable droppableId='group'>
             {(provided) => (
-              <div className="group" {...provided.droppableProps} ref={provided.innerRef}>
+              <div className="group noselect" {...provided.droppableProps} ref={provided.innerRef}>
                 {group!.map(({ id, country, code }, index) => {
                   return (
                     <Draggable key={id} draggableId={id} index={index}>
@@ -53,30 +53,7 @@ export function App(props: IndexProps) {
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
                           style={getItemsStyle(snapshot.isDragging, provided.draggableProps.style)}>
-                          {/* <ReactCountryFlag
-                            countryCode={code}
-                            svg
-                            style={{
-                              width: '2em',
-                              height: '2em',
-                              marginRight: '0.5rem'
-                            }}
-                            title={code}
-                          /> */}
-                          <ReactCountryFlag
-                            countryCode={code}
-                            svg
-                            cdnUrl="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/1x1/"
-                            style={{
-                              width: '1.5rem',
-                              height: '1.5rem',
-                              borderRadius: '50%',
-                              marginRight: '0.75rem',
-                              boxShadow: '0px 0px 10px 1px rgba(0,0,0,0.5)'
-                            }}
-                            cdnSuffix="svg"
-                            title={code}
-                          />
+                          <Flags code={code} />
                           {country}
                         </div>
                       )}
