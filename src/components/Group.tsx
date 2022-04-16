@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Component, useEffect } from 'react';
 import { DragDropContext, Draggable, Droppable, DropResult } from 'react-beautiful-dnd';
 import '../styles/Group.css';
 import source_data from "../json/groups.json";
@@ -23,18 +23,56 @@ type IndexProps = {
   groupName: string;
 }
 
+class App extends Component {
+  state = source_data;
+
+  saveStateToLocalStorage = () => {
+    localStorage.setItem('state', JSON.stringify(this.state));
+  }
+
+  getStateFromLocalStorage = () => {
+    let data = localStorage.getItem('state');
+    if (data !== undefined) {
+      this.setState(JSON.parse(data!));
+    }
+  }
+
+  componentDidMount() {
+    this.getStateFromLocalStorage();
+  }
+}
+
+interface GroupInterface {
+  id: string;
+  country: string;
+  code: string;
+}
+
 export function Group(props: IndexProps) {
-  const [group, setGroup] = useState(source_data.groups.at(props.index))
+  let groups = source_data.groups;
+  const [group, setGroup] = useState(groups.at(props.index))
+  let groupLocal = localStorage.getItem("groups")
+  useEffect(() => {
+    if (groupLocal) {
+      let groupConverted = JSON.parse(groupLocal)
+      setGroup(groupConverted.at(props.index))
+    }
+  }, [source_data.groups])
 
   const onDragEnd = (result: DropResult) => {
-    const { source, destination } = result
-    if (!destination) return
+    const { source, destination } = result;
+    if (!destination) return;
 
-    const items = Array.from(group!)
-    const [newOrder] = items.splice(source.index, 1)
-    items.splice(destination.index, 0, newOrder)
+    const items = Array.from(group!);
+    const [newOrder] = items.splice(source.index, 1);
+    items.splice(destination.index, 0, newOrder);
 
-    setGroup(items)
+    setGroup(items);
+    if(groupLocal) {
+      groups = JSON.parse(groupLocal)
+      groups.splice(props.index, 1, items);
+    }
+    localStorage.setItem("groups", JSON.stringify(groups));
   }
 
   return (
