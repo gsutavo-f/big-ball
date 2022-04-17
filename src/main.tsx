@@ -5,7 +5,7 @@ import { Group } from './components/Group'
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1 className="logo">BOLA.OOO</h1>
+    <h1 className="logo">BOLÃO.NET</h1>
     <div className='group-on'>
       <Group index={0} groupName="Grupo A" />
       <Group index={1} groupName="Grupo B" />

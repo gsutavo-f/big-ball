@@ -1,4 +1,4 @@
-import { useState, Component, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { DragDropContext, Draggable, Droppable, DropResult } from 'react-beautiful-dnd';
 import '../styles/Group.css';
 import source_data from "../json/groups.json";
@@ -23,40 +23,14 @@ type IndexProps = {
   groupName: string;
 }
 
-class App extends Component {
-  state = source_data;
-
-  saveStateToLocalStorage = () => {
-    localStorage.setItem('state', JSON.stringify(this.state));
-  }
-
-  getStateFromLocalStorage = () => {
-    let data = localStorage.getItem('state');
-    if (data !== undefined) {
-      this.setState(JSON.parse(data!));
-    }
-  }
-
-  componentDidMount() {
-    this.getStateFromLocalStorage();
-  }
-}
-
-interface GroupInterface {
-  id: string;
-  country: string;
-  code: string;
-}
-
 export function Group(props: IndexProps) {
-  let groups = source_data.groups;
-  const [group, setGroup] = useState(groups.at(props.index))
-  let groupLocal = localStorage.getItem("groups")
+  const [group, setGroup] = useState(source_data.groups.at(props.index))
   useEffect(() => {
-    if (groupLocal) {
-      let groupConverted = JSON.parse(groupLocal)
-      setGroup(groupConverted.at(props.index))
+    if (localStorage.getItem("groups") == null) {
+      localStorage.setItem("groups", JSON.stringify(source_data.groups))
     }
+    const groupsStoraged = JSON.parse(localStorage.getItem("groups")!)
+    setGroup(groupsStoraged.at(props.index))
   }, [source_data.groups])
 
   const onDragEnd = (result: DropResult) => {
@@ -68,11 +42,10 @@ export function Group(props: IndexProps) {
     items.splice(destination.index, 0, newOrder);
 
     setGroup(items);
-    if(groupLocal) {
-      groups = JSON.parse(groupLocal)
-      groups.splice(props.index, 1, items);
-    }
-    localStorage.setItem("groups", JSON.stringify(groups));
+
+    let groupsConverted = JSON.parse(localStorage.getItem("groups")!)
+    groupsConverted.splice(props.index, 1, items);
+    localStorage.setItem("groups", JSON.stringify(groupsConverted));
   }
 
   return (
