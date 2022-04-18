@@ -1,0 +1,27 @@
+.group-on {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 0;
+    padding-inline: 15%
+}
+
+/* REPENSAR RESPOSIVIDADE */
+
+@media(max-width: 1400px) {
+    .group-on {
+        padding-inline: 5%;
+    }
+}
+
+@media(max-width: 1000px) {
+    .group-on {
+        grid-template-columns: repeat(2, 1fr);
+        padding-inline: 15%;
+    }
+}
+
+.logo {
+    color: #5CF2AC;
+    text-align: center;
+    font-size: 56px;
+}

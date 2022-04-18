@@ -4,21 +4,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #053540;
+  font-size: 62.5%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.group-on {
-  display: flex;
-  justify-content: space-around;
-  padding-inline: 300px;
-}
-
-.logo {
-  color: #5CF2AC;
-  text-align: center;
-  font-size: 56px;
 }

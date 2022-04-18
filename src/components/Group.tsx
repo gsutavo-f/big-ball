@@ -5,11 +5,11 @@ import source_data from "../json/groups.json";
 import { Flags } from './Flags';
 
 const getItemsStyle = (isDragging: boolean, draggableStyle: any) => ({
-  padding: 10,
+  padding: `10px`,
   marginBottom: `0px`,
   background: isDragging ? "#2A8C68" : "#2A8C68",
   color: isDragging ? "#010326" : "#010326",
-  fontSize: `20px`,
+  fontSize: `2em`,
   fontWeight: `600`,
   borderRadius: isDragging ? `4px` : `0`,
   textAlign: `left`,
@@ -25,6 +25,7 @@ type IndexProps = {
 
 export function Group(props: IndexProps) {
   const [group, setGroup] = useState(source_data.groups.at(props.index))
+  
   useEffect(() => {
     if (localStorage.getItem("groups") == null) {
       localStorage.setItem("groups", JSON.stringify(source_data.groups))
