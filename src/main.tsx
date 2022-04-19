@@ -7,7 +7,7 @@ import './styles/index.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1 className="logo">BOLÃO.NET</h1>
+    <h1 className="logo noselect">BOLÃO.NET</h1>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Groups />} />

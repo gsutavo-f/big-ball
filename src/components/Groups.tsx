@@ -4,7 +4,7 @@ import ButtonBracketRedirect from './ButtonBracketRedirect'
 
 export function Groups() {
     return (
-        <div>
+        <>
             <div className='group-on'>
                 <Group index={0} groupName="Grupo A" />
                 <Group index={1} groupName="Grupo B" />
@@ -16,6 +16,6 @@ export function Groups() {
                 <Group index={7} groupName="Grupo H" />
             </div>
             <ButtonBracketRedirect />
-        </div>
+        </>
     );
 }
