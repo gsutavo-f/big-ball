@@ -1,10 +1,7 @@
 import ReactCountryFlag from "react-country-flag";
+import { FlagProps } from '../../types';
 
-type FlagProps = {
-    code: string;
-}
-
-export function Flags(props: FlagProps) {
+export function Flag(props: FlagProps) {
     return (
         <ReactCountryFlag
             countryCode={props.code}

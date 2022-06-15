@@ -1,11 +1,11 @@
-import { Group } from './Group';
-import '../styles/groups.css'
-import ButtonBracketRedirect from './ButtonBracketRedirect'
+import { Group } from '../../components/Group';
+import ButtonBracketRedirect from '../../components/ButtonBracketRedirect'
+import styles from './Groups.module.scss';
 
 export function Groups() {
     return (
         <>
-            <div className='group-on'>
+            <div className={styles.gridGroup}>
                 <Group index={0} groupName="Grupo A" />
                 <Group index={1} groupName="Grupo B" />
                 <Group index={2} groupName="Grupo C" />

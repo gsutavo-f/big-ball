@@ -1,4 +1,4 @@
-.group-on {
+.gridGroup {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 0;
@@ -8,13 +8,13 @@
 /* REPENSAR RESPONSIVIDADE */
 
 @media(max-width: 1400px) {
-    .group-on {
+    .gridGroup {
         padding-inline: 5%;
     }
 }
 
 @media(max-width: 1000px) {
-    .group-on {
+    .gridGroup {
         grid-template-columns: repeat(2, 1fr);
         padding-inline: 15%;
     }

@@ -1,9 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Groups } from './components/Groups'
-import { Brackets } from './components/Brackets'
-import './styles/index.css'
+import { Groups } from './pages/Groups';
+import { Brackets } from './pages/Brackets';
+import './styles/BigBall.module.scss';
 
 ReactDOM.render(
   <React.StrictMode>

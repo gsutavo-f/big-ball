@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { DragDropContext, Draggable, Droppable, DropResult } from 'react-beautiful-dnd';
-import '../styles/Group.css';
-import source_data from "../json/groups.json";
-import { Flags } from './Flags';
+import source_data from "../../json/groups.json";
+import { Flag } from '../Flag';
+import styles from '../../styles/BigBall.module.scss';
+import { GroupProps } from '../../types';
 
 const getItemsStyle = (isDragging: boolean, draggableStyle: any) => ({
   padding: `10px`,
@@ -16,23 +17,19 @@ const getItemsStyle = (isDragging: boolean, draggableStyle: any) => ({
   width: `190px`,
 
   ...draggableStyle
-})
+});
 
-type IndexProps = {
-  index: number;
-  groupName: string;
-}
+export function Group(props: GroupProps) {
+  if (localStorage.getItem("groups") == null) {
+    localStorage.setItem("groups", JSON.stringify(source_data.groups));
+  }
 
-export function Group(props: IndexProps) {
-  const [group, setGroup] = useState(source_data.groups.at(props.index))
-  
+  const [group, setGroup] = useState(source_data.groups.at(props.index));
+
   useEffect(() => {
-    if (localStorage.getItem("groups") == null) {
-      localStorage.setItem("groups", JSON.stringify(source_data.groups))
-    }
-    const groupsStoraged = JSON.parse(localStorage.getItem("groups")!)
-    setGroup(groupsStoraged.at(props.index))
-  }, [source_data.groups])
+    const groupsStoraged = JSON.parse(localStorage.getItem("groups")!);
+    setGroup(groupsStoraged.at(props.index));
+  }, []);
 
   const onDragEnd = (result: DropResult) => {
     const { source, destination } = result;
@@ -50,13 +47,13 @@ export function Group(props: IndexProps) {
   }
 
   return (
-    <div className="group-card">
-      <h1 className="title">{props.groupName}</h1>
-      <div className="group">
+    <div className={styles.groupCard}>
+      <h1 className={styles.title}>{props.groupName}</h1>
+      <div className={styles.group}>
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable droppableId='group'>
-            {(provided) => (
-              <div className="group noselect" {...provided.droppableProps} ref={provided.innerRef}>
+            {(provided) => ( // como adicionar o noselect aqui???
+              <div className={styles.group} {...provided.droppableProps} ref={provided.innerRef}>
                 {group!.map(({ id, country, code }, index) => {
                   return (
                     <Draggable key={id} draggableId={id} index={index}>
@@ -65,7 +62,7 @@ export function Group(props: IndexProps) {
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
                           style={getItemsStyle(snapshot.isDragging, provided.draggableProps.style)}>
-                          <Flags code={code} />
+                          <Flag code={code} />
                           {country}
                         </div>
                       )}

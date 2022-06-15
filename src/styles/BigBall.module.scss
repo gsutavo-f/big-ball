@@ -1,0 +1,62 @@
+.buttonDiv {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin-top: 10em;
+    margin-right: 20em;
+
+    &__button {
+        border: 0;
+        width: 9em;
+        height: 2.5em;
+        background-color: #2A8C68;
+        color: #010326;
+        font-family: 'Varela Round', sans-serif;
+        font-size: 2em;
+        font-weight: 600;
+        border-radius: 4.5em;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+    }
+}
+
+.groupCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: #5CF2AC;
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #053540;
+    font-size: 62.5%;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.logo {
+    color: #5CF2AC;
+    text-align: center;
+    font-size: 56px;
+}
