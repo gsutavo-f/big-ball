@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import styles from '../../styles/BigBall.module.scss';
 
-const ButtonBracketRedirect = () => {
+function ButtonBracketRedirect() {
     const navigate = useNavigate();
 
     const handleClick = () => {
