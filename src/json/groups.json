@@ -40,8 +40,8 @@
             },
             {
                 "id": "8",
-                "country": "Euro Play-off",
-                "code": "CY"
+                "country": "País de Gales",
+                "code": "GB-WLS"
             }
         ],
         [
@@ -74,8 +74,8 @@
             },
             {
                 "id": "14",
-                "country": "IC Play-off 1",
-                "code": "CY"
+                "country": "Australia",
+                "code": "AU"
             },
             {
                 "id": "15",
@@ -96,8 +96,8 @@
             },
             {
                 "id": "18",
-                "country": "IC Play-off 2",
-                "code": "CY"
+                "country": "Costa Rica",
+                "code": "CR"
             },
             {
                 "id": "19",
