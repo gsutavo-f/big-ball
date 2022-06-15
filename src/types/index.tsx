@@ -6,3 +6,9 @@ export type GroupProps = {
 export type FlagProps = {
     code: string;
 }
+
+export type Country = {
+    id: string,
+    country: string,
+    code: string
+}
