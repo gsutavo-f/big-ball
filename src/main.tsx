@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Groups } from './pages/Groups';
 import { Brackets } from './pages/Brackets';
-import './styles/BigBall.module.scss';
+import styles from './styles/BigBall.module.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1 className="logo noselect">BOLÃO.NET</h1>
+    <h1 className={styles.logo}>BOLÃO.NET</h1>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Groups />} />
