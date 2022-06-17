@@ -23,15 +23,21 @@ function getItemsStyle(isDragging: boolean, draggableStyle: any) {
 
 export function Group(props: GroupProps) {
   const [group, setGroup] = useState<Country[]>([]);
-
-  if (localStorage.getItem("groups") == null) {
-    localStorage.setItem("groups", JSON.stringify(source_data.groups));
-  }
-
+  
   useEffect(() => {
+    if (localStorage.getItem("groups") == null) {
+      localStorage.setItem("groups", JSON.stringify(source_data.groups));
+    }
+
     const groupsStoraged = JSON.parse(localStorage.getItem("groups")!);
     setGroup(groupsStoraged.at(props.index));
   }, []);
+
+  useEffect(() => {
+    const groupsStoraged = JSON.parse(localStorage.getItem("groups")!);
+    groupsStoraged.splice(props.index, 1, group);
+    localStorage.setItem("groups", JSON.stringify(groupsStoraged));
+  }, [group]);
 
   function onDragEnd(result: DropResult) {
     const { source, destination } = result;
@@ -42,10 +48,6 @@ export function Group(props: GroupProps) {
     items.splice(destination.index, 0, newOrder);
 
     setGroup(items);
-
-    let groupsConverted = JSON.parse(localStorage.getItem("groups")!)
-    groupsConverted.splice(props.index, 1, items);
-    localStorage.setItem("groups", JSON.stringify(groupsConverted));
   }
 
   return (
