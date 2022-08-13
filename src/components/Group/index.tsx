@@ -34,9 +34,9 @@ export function Group(props: GroupProps) {
   }, []);
 
   useEffect(() => {
-    const groupsStoraged = JSON.parse(localStorage.getItem("groups")!);
-    groupsStoraged.splice(props.index, 1, group);
-    localStorage.setItem('groups', JSON.stringify(groupsStoraged));
+    const groupsStored = JSON.parse(localStorage.getItem('groups')!);
+    groupsStored.splice(props.index, 1, group);
+    localStorage.setItem('groups', JSON.stringify(groupsStored));
   }, [group]);
 
   function onDragEnd(result: DropResult) {
