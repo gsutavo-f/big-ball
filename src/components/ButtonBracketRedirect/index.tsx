@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router";
-import styles from '../../styles/BigBall.module.scss';
+import { useNavigate } from 'react-router';
+import styles from 'styles/BigBall.module.scss';
 
 function ButtonBracketRedirect() {
     const navigate = useNavigate();
@@ -10,7 +10,7 @@ function ButtonBracketRedirect() {
 
     return (
         <div className={styles.buttonDiv}>
-            <button onClick={handleClick} type="button">CONTINUAR</button>
+            <button onClick={handleClick} type='button'>CONTINUAR</button>
         </div>
     );
 }

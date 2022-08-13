@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styles from './styles/BigBall.module.scss';
 import { Groups } from './pages/Groups';
 import { Brackets } from './pages/Brackets';

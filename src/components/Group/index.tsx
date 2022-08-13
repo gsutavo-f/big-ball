@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
 import { DragDropContext, Draggable, Droppable, DropResult } from 'react-beautiful-dnd';
-import source_data from "../../json/groups.json";
+import source_data from 'json/groups.json';
 import Flag from '../Flag';
-import styles from '../../styles/BigBall.module.scss';
-import { GroupProps, Country } from '../../types';
+import styles from 'styles/BigBall.module.scss';
+import { GroupProps, Country } from 'types';
 
 function getItemsStyle(isDragging: boolean, draggableStyle: any) {
   return ({
     padding: `10px`,
     marginBottom: `0px`,
-    background: isDragging ? "#2A8C68" : "#2A8C68",
-    color: isDragging ? "#010326" : "#010326",
+    background: isDragging ? '#2A8C68' : '#2A8C68',
+    color: isDragging ? '#010326' : '#010326',
     fontSize: `2em`,
     fontWeight: `600`,
     borderRadius: isDragging ? `4px` : `0`,
@@ -23,20 +23,20 @@ function getItemsStyle(isDragging: boolean, draggableStyle: any) {
 
 export function Group(props: GroupProps) {
   const [group, setGroup] = useState<Country[]>([]);
-  
+
   useEffect(() => {
-    if (localStorage.getItem("groups") == null) {
-      localStorage.setItem("groups", JSON.stringify(source_data.groups));
+    if (localStorage.getItem('groups') == null) {
+      localStorage.setItem('groups', JSON.stringify(source_data.groups));
     }
 
-    const groupsStoraged = JSON.parse(localStorage.getItem("groups")!);
+    const groupsStoraged = JSON.parse(localStorage.getItem('groups')!);
     setGroup(groupsStoraged.at(props.index));
   }, []);
 
   useEffect(() => {
     const groupsStoraged = JSON.parse(localStorage.getItem("groups")!);
     groupsStoraged.splice(props.index, 1, group);
-    localStorage.setItem("groups", JSON.stringify(groupsStoraged));
+    localStorage.setItem('groups', JSON.stringify(groupsStoraged));
   }, [group]);
 
   function onDragEnd(result: DropResult) {

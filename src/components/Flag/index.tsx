@@ -1,12 +1,12 @@
-import ReactCountryFlag from "react-country-flag";
-import { FlagProps } from '../../types';
+import ReactCountryFlag from 'react-country-flag';
+import { FlagProps } from 'types';
 
 export default function Flag(props: FlagProps) {
     return (
         <ReactCountryFlag
             countryCode={props.code}
             svg
-            cdnUrl="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/1x1/"
+            cdnUrl='https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/1x1/'
             style={{
                 width: '1.5rem',
                 height: '1.5rem',
@@ -14,7 +14,7 @@ export default function Flag(props: FlagProps) {
                 marginRight: '0.75rem',
                 boxShadow: '0px 0px 10px 1px rgba(0,0,0,0.5)'
             }}
-            cdnSuffix="svg"
+            cdnSuffix='svg'
             title={props.code}
         />
     );

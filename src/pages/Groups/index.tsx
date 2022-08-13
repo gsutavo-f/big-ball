@@ -1,5 +1,5 @@
-import { Group } from '../../components/Group';
-import ButtonBracketRedirect from '../../components/ButtonBracketRedirect'
+import { Group } from 'components/Group';
+import ButtonBracketRedirect from 'components/ButtonBracketRedirect'
 import styles from './Groups.module.scss';
 
 export function Groups() {
