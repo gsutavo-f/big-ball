@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { DragDropContext, Draggable, Droppable, DropResult } from 'react-beautiful-dnd';
-import source_data from 'json/groups.json';
+import source_data from '../../json/groups.json';
 import Flag from '../Flag';
-import styles from 'styles/BigBall.module.scss';
-import { GroupProps, Country } from 'types';
+import styles from '../../styles/BigBall.module.scss';
+import { GroupProps, Country } from '../../types';
 
 function getItemsStyle(isDragging: boolean, draggableStyle: any) {
   return ({

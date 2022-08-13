@@ -1,5 +1,5 @@
 import ReactCountryFlag from 'react-country-flag';
-import { FlagProps } from 'types';
+import { FlagProps } from '../../types';
 
 export default function Flag(props: FlagProps) {
     return (
