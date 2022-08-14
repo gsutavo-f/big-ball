@@ -12,3 +12,8 @@ export type Country = {
     country: string,
     code: string
 }
+
+export type Match = {
+    team1: Country,
+    team2: Country
+}

@@ -29,8 +29,8 @@ export function Group(props: GroupProps) {
       localStorage.setItem('groups', JSON.stringify(source_data.groups));
     }
 
-    const groupsStoraged = JSON.parse(localStorage.getItem('groups')!);
-    setGroup(groupsStoraged.at(props.index));
+    const groupsStored = JSON.parse(localStorage.getItem('groups')!);
+    setGroup(groupsStored.at(props.index));
   }, []);
 
   useEffect(() => {
